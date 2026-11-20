@@ -1,0 +1,133 @@
+[
+  {
+    "id":"ai-is-a-learning-partner","title":"AI Doesn’t Learn for Us. It Changes How We Learn","category":"Artificial Intelligence","readTime":"5 min read","excerpt":"Turn generative AI from an answer machine into a partner for thinking and practice.","content":[
+      {"type":"p","text":"What if the best way to use AI were not to ask it to explain a topic, but to check how well we understand it? This small shift can turn a tool that generates answers into a partner for thinking."},
+      {"type":"h2","text":"An answer is only the beginning"},
+      {"type":"p","text":"A ready-made explanation can make familiarity feel like understanding. Learning begins when we have to recall, apply and explain an idea in our own words."},
+      {"type":"p","text":"Ask AI to pose three questions about a topic, wait for your answers, then point out gaps in your reasoning. Or ask for a problem that is a little harder than the last one."},
+      {"type":"h2","text":"A short experiment"},
+      {"type":"ul","items":["Before prompting, write down what you already know and what remains unclear.","Ask the tool to pose follow-up questions instead of giving you the answer immediately.","At the end, explain the topic in your own words without prompts and check what you missed."]},
+      {"type":"p","text":"Technology can make practice more accessible and personal. Curiosity, effort and the choice of where to go next are still ours."}
+    ]
+  },
+  {
+    "id":"small-learning-habits","title":"Small Learning Habits That Outlast Motivation","category":"Learning Habits","readTime":"4 min read","excerpt":"Consistency comes less from heroic effort than from making the first step easy enough to repeat.","content":[
+      {"type":"p","text":"Motivation comes and goes. A habit helps us learn on an ordinary Tuesday, when there is a lot to do and little energy to spare."},
+      {"type":"h2","text":"Lower the starting barrier"},
+      {"type":"p","text":"Don’t promise yourself you’ll master a whole subject tonight. Commit to opening your notes and working for ten minutes. A short start often becomes a longer session. If it doesn’t, you still kept the rhythm."},
+      {"type":"ul","items":["Tie learning to a regular event, such as your morning coffee.","Prepare the material ahead of time so you don’t spend your energy searching for it.","End by noting the next small step."]},
+      {"type":"p","text":"Steady progress is built from returning. Let yourself start small: it’s a sound strategy, not a compromise."}
+    ]
+  },
+  {
+    "id":"why-we-forget","title":"Why We Forget—and How to Use That to Our Advantage","category":"Memory and the Brain","readTime":"6 min read","excerpt":"Review works better when you leave space between sessions and make recall take a little effort.","content":[
+      {"type":"p","text":"Forgetting doesn’t mean you’re bad at learning. It signals that your brain needs another encounter with the material."},
+      {"type":"h2","text":"Recall beats rereading"},
+      {"type":"p","text":"When we close the book and try to reconstruct the main ideas, we practise the same pathway we need when applying knowledge. Your answer can be incomplete; the effort of recalling is already useful."},
+      {"type":"p","text":"Try this short routine: after a session, write down three ideas from memory, revisit them the next day, then again a few days later. Don’t wait until everything is forgotten: the small effort of recall is part of the practice."},
+      {"type":"p","text":"The goal isn’t a perfect memory. It’s to build bridges back to knowledge, again and again."}
+    ]
+  },
+  {
+    "id":"learning-beyond-classroom","title":"Learning Beyond the Classroom: The City as an Open Campus","category":"The Future of Education","readTime":"5 min read","excerpt":"When learning moves beyond the classroom, an ordinary walk can become a field study.","content":[
+      {"type":"p","text":"It’s easy to imagine education as a separate time and place. Yet many questions begin right on the street: why is a neighbourhood built this way, how does public transport work, who made the mural on the corner?"},
+      {"type":"h2","text":"Go out with a question"},
+      {"type":"p","text":"Choose one topic and take a short research walk. Take a photo, note what you observe, find a source and test your hunch. The city offers context that an abstract example often lacks."},
+      {"type":"p","text":"These walks don’t replace structured learning. They help us see where knowledge meets life—and which questions to ask next."}
+    ]
+  },
+  {
+    "id":"portfolio-of-skills","title":"A Skills Portfolio: What to Show Instead of a List of Courses","category":"The Future of Education","readTime":"4 min read","excerpt":"One finished project can show what you can do better than a long list of lessons you’ve watched.","content":[
+      {"type":"p","text":"A certificate shows you completed a programme. A project shows what you can do with what you learned. That’s why portfolios are useful far beyond creative careers."},
+      {"type":"h2","text":"Tell the story of your work"},
+      {"type":"p","text":"For each piece, record the task, your approach, the tools, the result and what you would change next time. This short reflection makes progress visible to you and to anyone viewing your portfolio."},
+      {"type":"p","text":"Start small: choose three examples that show different sides of one skill. A living portfolio grows with your experience."}
+    ]
+  },
+  {
+    "id":"questions-first","title":"Start with a Good Question, Not a Plan","category":"Learning Habits","readTime":"3 min read","excerpt":"A specific question turns a large, intimidating subject into a path you can follow step by step.","content":[
+      {"type":"p","text":"“Learn design” is an enormous plan. “Why does this page feel easy to read?” is a question you can start with."},
+      {"type":"p","text":"Write down questions that come up while you work, read or talk with someone. Choose one, find answers in two different sources and explain what you learned in your own words. This gives learning direction while leaving room for discovery."},
+      {"type":"p","text":"You don’t need to know the whole route in advance. Finding the next question is enough."}
+    ]
+  },
+  {
+    "id":"supportive-listening","title":"How to Be There for Someone Who Is Struggling","category":"Psychological Support","readTime":"5 min read","excerpt":"Support often starts not with advice, but with a calm presence and the question: “How can I help?”","content":[
+      {"type":"p","text":"When someone close to us is struggling, we often rush to find the right words or solve the problem. A simpler first step is to approach with respect, ask if they would like to talk and listen without pressure."},
+      {"type":"h2","text":"Three steps to thoughtful support"},
+      {"type":"ul","items":["Ask what matters most to the person right now instead of guessing for them.","Listen carefully. Don’t press for details or rush to judge or advise.","Offer specific, practical help: stay nearby, bring water, call a professional together or help with an everyday task."]},
+      {"type":"p","text":"You might say: “I’m here. Would you like to tell me what feels hardest right now?” or “Would it help if I just listened, or shall we look for a next step together?” Avoid phrases like “pull yourself together” or “everything will be fine”; even when well meant, they can dismiss someone’s experience."},
+      {"type":"p","text":"You don’t need to become someone’s therapist. If their situation isn’t improving, affects everyday life or raises a safety concern, help them connect with a professional service. If there is immediate danger, contact local emergency services."},
+      {"type":"sources","items":[{"title":"WHO: Psychological first aid—Guide for field workers","url":"https://www.who.int/publications/i/item/9789241548205"},{"title":"WHO: Psychological first aid resources","url":"https://www.who.int/publications/psychological-first-aid"}]}
+    ]
+  },
+  {
+    "id":"getting-professional-support-ukraine","title":"How to Find Professional Psychological Support in Ukraine","category":"Psychological Support","readTime":"4 min read","excerpt":"You don’t need to wait for a crisis or arrive with a diagnosis. You can start by talking to your family doctor or a specialist service.","content":[
+      {"type":"p","text":"If anxiety, low mood, exhaustion or the effects of a difficult experience persist or interfere with sleep, relationships, work or study, seeking help is a reasonable next step. You don’t need to diagnose yourself."},
+      {"type":"h2","text":"Where you can start"},
+      {"type":"ul","items":["Talk with your family doctor, general practitioner or paediatrician. They can discuss how you’re doing, offer basic support and suggest next steps.","Check the NHSU provider map and the conditions for free services in your area.","If it feels easier to start by phone, choose a crisis or specialist line from an official, current directory and check its hours."]},
+      {"type":"p","text":"According to Ukraine’s Ministry of Health, psychological and psychiatric services may be free at facilities that have the relevant NHSU contract. The right route depends on your needs and what is available locally; the Ministry’s official page provides current guidance and a map."},
+      {"type":"p","text":"If there is an immediate threat to your life or safety, or someone else’s, contact local emergency services or ask a trusted person to stay with you while help is on the way."},
+      {"type":"sources","items":[{"title":"Ukraine Ministry of Health: free mental health services","url":"https://moz.gov.ua/uk/bezoplatni-poslugi-z-ohoroni-psihichnogo-zdorov-ya"},{"title":"Ukraine Ministry of Health: where and how to access free services","url":"https://moz.gov.ua/uk/de-i-yak-otrimati-bezoplatni-poslugi-z-ohoroni-psihichnogo-zdorov-ya"},{"title":"How Are You?—Ukraine’s mental health and self-help portal","url":"https://howareu.com/"}]}
+    ]
+  },
+  {
+    "id":"guided-self-help-2026","title":"Self-Help Is a Skill, Not a Requirement to Cope Alone","category":"Psychological Support","readTime":"5 min read","excerpt":"WHO’s 2026 guide supports structured self-help, sometimes with brief help from a trained person, and also explains its limits.","content":[
+      {"type":"p","text":"In June 2026, WHO published a practical guide for organizations introducing psychological self-help programmes. It covers structured programmes people can use on their own, as well as formats with brief, regular support from a trained and supervised helper."},
+      {"type":"p","text":"That distinction matters: self-help can make evidence-based exercises easier to access. It does not mean that someone must solve every difficulty alone or avoid professional care."},
+      {"type":"h2","text":"A gentle place to start today"},
+      {"type":"ul","items":["Notice what you are feeling without demanding that it change immediately.","Take one small action connected to a value that matters to you: message someone close, take a short walk or ask for a break.","If an exercise increases distress or your situation seriously affects daily life, stop and seek professional support."]},
+      {"type":"p","text":"WHO’s guide Doing What Matters in Times of Stress also offers grounding exercises, ways to step back from difficult thoughts and ideas for acting on personal values. These are educational tools, not a substitute for assessment or treatment."},
+      {"type":"sources","items":[{"title":"WHO, 1 June 2026: a guide to scaling psychological self-help","url":"https://www.who.int/news/item/01-06-2026-who-launches-new-guide-to-help-scale-psychological-self-help"},{"title":"WHO: coping with stress and self-help materials","url":"https://www.who.int/news-room/questions-and-answers/item/stress"},{"title":"WHO: Doing What Matters in Times of Stress","url":"https://www.who.int/publications/i/item/9789240003927"}]}
+    ]
+  },
+  {
+    "id":"community-based-mental-health-2026","title":"Support Close to Home: Why Mental Health Care Belongs in Communities","category":"Psychological Support","readTime":"4 min read","excerpt":"In October 2026, WHO released new guidance on person-centred community care that respects people’s dignity and choices.","content":[
+      {"type":"p","text":"Psychological support is more than a one-to-one appointment. Access to a family doctor, specialist services, support groups, social connections and everyday activities can all be part of a path to recovery."},
+      {"type":"p","text":"On 9 October 2026, WHO released guidance on developing person-centred support in communities. Its central principle is care that respects people’s rights and choices and helps them remain part of their community. The guidance is intended primarily for health systems, professionals and service planners."},
+      {"type":"h2","text":"What this can mean when you’re seeking help"},
+      {"type":"ul","items":["Ask about more than one support option and discuss which may suit you.","Find out how medical, psychological and social services connect.","If you wish, involve someone you trust in exploring options. The decision remains yours."]},
+      {"type":"p","text":"In Ukraine, a practical starting point may be a family doctor, a local mental health centre or an up-to-date service map. Check directly with the provider whether a service is available and what conditions apply."},
+      {"type":"sources","items":[{"title":"WHO, 9 October 2026: shift towards community-based mental health care","url":"https://www.who.int/news/item/09-10-2026-who-urges-shift-from-institutional-to-community-based-mental-health-care"},{"title":"WHO, 11 September 2026: current facts and approaches to mental health","url":"https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response"},{"title":"Ukraine Ministry of Health: mental health services","url":"https://moz.gov.ua/uk/mental-health"}]}
+    ]
+  },
+  {
+    "id":"current-psychological-support-resources-ukraine","title":"Where to Find Psychological Support: Verified Ukraine Resources","category":"Psychological Support","readTime":"3 min read","excerpt":"Official pages with care pathways and current contacts. Checked on 20 November 2026; schedules and availability may change.","content":[
+      {"type":"p","text":"Phone numbers and opening hours can change. Instead of a long list that may quickly become outdated, here are organization pages where you can check current ways to get in touch."},
+      {"type":"h2","text":"Official pages to start your search"},
+      {"type":"sources","items":[{"title":"Ukraine Ministry of Health: free psychological and psychiatric care","url":"https://moz.gov.ua/uk/bezoplatni-poslugi-z-ohoroni-psihichnogo-zdorov-ya"},{"title":"Ukraine Ministry of Health: contacts and provider map","url":"https://moz.gov.ua/uk/de-i-yak-otrimati-bezoplatni-poslugi-z-ohoroni-psihichnogo-zdorov-ya"},{"title":"How Are You?—Ukraine’s mental health and self-help portal","url":"https://howareu.com/"},{"title":"UNHCR Ukraine: psychological support, helplines and 2026 partner coverage","url":"https://help.unhcr.org/ukraine/uk/ukraine-uk-where-to-seek-help-ua/supporting-your-feelings-and-worries-ua/"}]},
+      {"type":"p","text":"This directory was reviewed on 20 November 2026. Before contacting a service, check its page for the current number, hours, format and geographic coverage. If there is an immediate threat to life or safety, contact local emergency services."}
+    ]
+  },
+  {
+    "id":"courses-that-keep-learning","title":"A Course That Doesn’t Go Stale: Building an Update Cycle","category":"Learning Design","readTime":"7 min read","excerpt":"Think of a course not as a document reviewed every few years, but as a living system connecting trusted sources, people’s needs, new developments and human approval.","featured":true,"content":[
+      {"type":"p","text":"Professional fields can change faster than a typical curriculum. A course can be updated systematically: define its goals and teaching principles, regularly review relevant sources and prepare a documented new version."},
+      {"type":"h2","text":"Four parts of the cycle"},
+      {"type":"ul","items":["Foundation: the learners, expected outcomes, approved structure and quality criteria.","Sources: official standards and professional guidance, relevant literature and internal materials that are approved for use.","Change review: what is new, which topics may be outdated and what it means in practice.","Draft for review: proposed structure, lesson and exercise edits, and a short change log for the responsible specialist."]},
+      {"type":"p","text":"AI can help compare materials, spot changes, group topics and draft text or exercises. It should provide a source and rationale for every significant proposed edit. The final decision and publication stay with the course lead or another accountable professional."},
+      {"type":"h2","text":"Not every review means rewriting the course"},
+      {"type":"p","text":"A regular review may conclude that nothing material has changed. When updates are needed, record their urgency, which materials are affected and when to review again. This helps a team understand not only what changed, but why."},
+      {"type":"p","text":"Reminders and the preparation of a review can be automated. A person still needs to check source quality, interpretation and relevance to the specific learners."}
+    ]
+  },
+  {
+    "id":"start-with-real-work","title":"Design Courses Around the Work People Actually Do","category":"Learning Design","readTime":"6 min read","excerpt":"Professional standards provide an essential foundation. A course becomes practical when it also addresses the real challenges of a specific team.","content":[
+      {"type":"p","text":"Before writing a curriculum, talk with people who do the work: people in different roles and at different levels of experience. A private conversation of about 30–60 minutes can reveal both formal processes and where delays, mistakes or uncertainty arise."},
+      {"type":"h2","text":"Questions for the first conversation"},
+      {"type":"ul","items":["What are the most important difficulties you face at work right now?","In what situations does the problem occur most often?","What knowledge, tools or authority are missing?","What has changed in recent months?","Which existing training no longer helps, and why?","What would show you that the training was useful?"]},
+      {"type":"p","text":"Explain the purpose of the conversation in advance. Get explicit consent before recording; if there is no consent, take notes without recording. Agree who can access the materials and how long they will be kept. Don’t share personal or confidential work data with AI services without proper authorization and a review of the organization’s rules."},
+      {"type":"p","text":"After the conversations, summarize the findings in a challenge map: the situation, who it affects, what people do now, what they need and how improvement could be checked. Use generalized or anonymized examples when names and identifying details aren’t needed for the learning task."},
+      {"type":"p","text":"Then compare the map with the course’s teaching framework and professional standards. This helps focus learning on real tasks rather than only on an abstract list of topics."}
+    ]
+  },
+  {
+    "id":"course-feedback-loop","title":"Three Months Later: Did the Course Change the Work?","category":"Learning Design","readTime":"5 min read","excerpt":"Finishing a course isn’t the end. A follow-up conversation shows what people actually use and what to change in the next version.","content":[
+      {"type":"p","text":"Right after training, people can recall their impressions and intentions, but may not yet know what they can apply at work. Return to participants after about three months and ask what has changed."},
+      {"type":"h2","text":"Five follow-up questions"},
+      {"type":"ul","items":["Which difficulties have eased or gone away?","What remains difficult, and what is getting in the way?","What new situations have come up?","Which tools or ideas from the course have you actually used?","What should change in the next version?"]},
+      {"type":"p","text":"Compare the answers with the course goals and available work indicators. Record what worked, which assumptions were not confirmed and what changes are proposed. Don’t attribute an outcome to the course if other factors may have contributed."},
+      {"type":"p","text":"AI can group anonymized feedback, compare it with the earlier challenge map and prepare suggestions. A learning designer checks the conclusions, approves edits and keeps a short version history. The next conversation begins another improvement cycle."},
+      {"type":"p","text":"A practical rhythm is: interviews and approved internal materials → needs map → course → practice → follow-up interview → approved updates. Consistency matters more than a complex system: start with one small pilot course."}
+    ]
+  }
+]

@@ -121,6 +121,8 @@ function openPost(id) {
   const blocks = post.content.map(block => {
     if (block.type === 'h2') return `<h2>${block.text}</h2>`;
     if (block.type === 'ul') return `<ul>${block.items.map(item => `<li>${item}</li>`).join('')}</ul>`;
+    if (block.type === 'image') return `<figure class="article-media"><img src="${block.src}" alt="${block.alt}" loading="lazy"><figcaption>${block.caption}<br><a href="${block.creditUrl}" target="_blank" rel="noopener noreferrer">${block.credit}</a> · <a href="${block.licenseUrl}" target="_blank" rel="noopener noreferrer">${block.license}</a></figcaption></figure>`;
+    if (block.type === 'video') return `<figure class="article-media"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/${block.videoId}?rel=0" title="${block.title}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><figcaption>${block.caption}<br><a href="${block.sourceUrl}" target="_blank" rel="noopener noreferrer">${block.sourceLabel} ↗</a></figcaption></figure>`;
     if (block.type === 'sources') return `<div class="source-list"><h2>${ui[language].sources}</h2><ul>${block.items.map(item => `<li><a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.title} <span aria-hidden="true">↗</span></a></li>`).join('')}</ul></div>`;
     return `<p>${block.text}</p>`;
   }).join('');

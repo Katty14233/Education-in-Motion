@@ -22,7 +22,7 @@ const ui = {
     heroFoot: ['ІДЕЇ ДЛЯ ТИХ, ХТО НАВЧАЄТЬСЯ', 'ГОРТАЙТЕ ВНИЗ'], library: 'Бібліотека ідей', fresh: 'Свіжі думки',
     sectionNote: 'Менше теорії заради теорії.<br>Більше того, що працює.', search: 'Знайти матеріал…',
     empty: 'Поки що нічого не знайшлося. Спробуйте іншу тему або запит.', read: 'Читати матеріал',
-    sources: 'Джерела й актуальні ресурси', share: 'Поширити статтю', shareNative: 'Поділитися', copyLink: 'Копіювати посилання', copied: 'Посилання скопійовано', shareError: 'Не вдалося скопіювати. Скопіюйте адресу з рядка браузера.',
+    sources: 'Джерела й актуальні ресурси', share: 'Поширити статтю', shareEntry: 'Поширити', shareNative: 'Поділитися', copyLink: 'Копіювати посилання', copied: 'Посилання скопійовано', shareError: 'Не вдалося скопіювати. Скопіюйте адресу з рядка браузера.',
     aboutEyebrow: 'Навіщо цей блог', aboutTitle: 'Майбутнє освіти<br>починається з <em>цікавості.</em>',
     aboutP1: 'Я вірю, що найкраща освіта — не та, що дає всі відповіді, а та, що допомагає ставити кращі запитання.',
     aboutP2: 'Цей блог — простір для роздумів про нові інструменти, людські навички та сміливі способи вчитися.',
@@ -41,7 +41,7 @@ const ui = {
     heroFoot: ['IDEAS FOR CURIOUS LEARNERS', 'SCROLL DOWN'], library: 'A library of ideas', fresh: 'Fresh perspectives',
     sectionNote: 'Less theory for theory’s sake.<br>More of what works.', search: 'Search articles…',
     empty: 'No articles found. Try another topic or search term.', read: 'Read article',
-    sources: 'Sources and further reading', share: 'Share this article', shareNative: 'Share', copyLink: 'Copy link', copied: 'Link copied', shareError: 'Could not copy the link. Copy the address from your browser.',
+    sources: 'Sources and further reading', share: 'Share this article', shareEntry: 'Share', shareNative: 'Share', copyLink: 'Copy link', copied: 'Link copied', shareError: 'Could not copy the link. Copy the address from your browser.',
     aboutEyebrow: 'Why this blog', aboutTitle: 'The future of learning<br>begins with <em>curiosity.</em>',
     aboutP1: 'I believe the best education is not the kind that gives every answer, but the kind that helps us ask better questions.',
     aboutP2: 'This blog is a space to explore new tools, human skills and thoughtful ways to learn.',
@@ -111,9 +111,10 @@ function renderFilters() {
 }
 
 function cardMarkup(post) {
-  return `<article class="article-card" tabindex="0" role="button" data-post="${post.id}" aria-label="${ui[language].read}: ${post.title}">
+  return `<article class="article-card">
+    <a class="card-open" href="#article-${post.id}" data-post="${post.id}" aria-label="${ui[language].read}: ${post.title}">
     <div class="card-art ${post.tone || 'tone-green'}" aria-hidden="true"><span>${post.symbol || '✳'}</span></div>
-    ${metaMarkup(post)}<h3>${post.title}</h3><p>${post.excerpt}</p><span class="card-read">${ui[language].read} <span aria-hidden="true">↗</span></span>
+    ${metaMarkup(post)}<h3>${post.title}</h3><p>${post.excerpt}</p><span class="card-read">${ui[language].read} <span aria-hidden="true">↗</span></span></a><button class="card-share" type="button" data-share-trigger="${post.id}">↗ ${ui[language].shareEntry}</button>
   </article>`;
 }
 
@@ -179,15 +180,30 @@ function render() {
   const featured = matching.find(post => post.featured);
   featuredWrap.innerHTML = featured ? `<article class="featured">
     <div class="featured-visual ${featured.tone || 'tone-green'}" aria-hidden="true"><span class="featured-glyph">${featured.symbol || '✳'}</span></div>
-    <div class="featured-info">${metaMarkup(featured)}<h3>${featured.title}</h3><p>${featured.excerpt}</p><a class="read-link" href="#article-${featured.id}" data-post="${featured.id}">${ui[language].read} <span aria-hidden="true">↗</span></a></div>
+    <div class="featured-info">${metaMarkup(featured)}<h3>${featured.title}</h3><p>${featured.excerpt}</p><a class="read-link" href="#article-${featured.id}" data-post="${featured.id}">${ui[language].read} <span aria-hidden="true">↗</span></a><button class="card-share" type="button" data-share-trigger="${featured.id}">↗ ${ui[language].shareEntry}</button></div>
   </article>` : '';
   grid.innerHTML = matching.filter(post => post !== featured).map(cardMarkup).join('');
   emptyState.hidden = matching.length > 0;
   document.querySelectorAll('[data-post]').forEach(element => {
     element.addEventListener('click', event => { event.preventDefault(); openPost(element.dataset.post); });
-    if (element.matches('.article-card')) element.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openPost(element.dataset.post); } });
   });
 }
+
+function openShareOptions(postId) {
+  openPost(postId);
+  requestAnimationFrame(() => {
+    dialogContent.querySelector('.share-panel')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    dialogContent.querySelector('[data-share-native]')?.focus();
+  });
+}
+
+[grid, featuredWrap].forEach(container => container.addEventListener('click', event => {
+  const trigger = event.target.closest('[data-share-trigger]');
+  if (!trigger) return;
+  event.preventDefault();
+  event.stopPropagation();
+  openShareOptions(trigger.dataset.shareTrigger);
+}));
 
 search.addEventListener('input', render);
 dialogContent.addEventListener('click', async event => {

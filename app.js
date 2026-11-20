@@ -22,7 +22,8 @@ const ui = {
     heroFoot: ['ІДЕЇ ДЛЯ ТИХ, ХТО НАВЧАЄТЬСЯ', 'ГОРТАЙТЕ ВНИЗ'], library: 'Бібліотека ідей', fresh: 'Свіжі думки',
     sectionNote: 'Менше теорії заради теорії.<br>Більше того, що працює.', search: 'Знайти матеріал…',
     empty: 'Поки що нічого не знайшлося. Спробуйте іншу тему або запит.', read: 'Читати матеріал',
-    sources: 'Джерела й актуальні ресурси', aboutEyebrow: 'Навіщо цей блог', aboutTitle: 'Майбутнє освіти<br>починається з <em>цікавості.</em>',
+    sources: 'Джерела й актуальні ресурси', share: 'Поширити статтю', shareNative: 'Поділитися', copyLink: 'Копіювати посилання', copied: 'Посилання скопійовано', shareError: 'Не вдалося скопіювати. Скопіюйте адресу з рядка браузера.',
+    aboutEyebrow: 'Навіщо цей блог', aboutTitle: 'Майбутнє освіти<br>починається з <em>цікавості.</em>',
     aboutP1: 'Я вірю, що найкраща освіта — не та, що дає всі відповіді, а та, що допомагає ставити кращі запитання.',
     aboutP2: 'Цей блог — простір для роздумів про нові інструменти, людські навички та сміливі способи вчитися.',
     contact: 'Написати автору', footer: 'Думати. Пробувати. Вчитися.', title: 'Education in Motion — блог про навчання майбутнього',
@@ -40,7 +41,8 @@ const ui = {
     heroFoot: ['IDEAS FOR CURIOUS LEARNERS', 'SCROLL DOWN'], library: 'A library of ideas', fresh: 'Fresh perspectives',
     sectionNote: 'Less theory for theory’s sake.<br>More of what works.', search: 'Search articles…',
     empty: 'No articles found. Try another topic or search term.', read: 'Read article',
-    sources: 'Sources and further reading', aboutEyebrow: 'Why this blog', aboutTitle: 'The future of learning<br>begins with <em>curiosity.</em>',
+    sources: 'Sources and further reading', share: 'Share this article', shareNative: 'Share', copyLink: 'Copy link', copied: 'Link copied', shareError: 'Could not copy the link. Copy the address from your browser.',
+    aboutEyebrow: 'Why this blog', aboutTitle: 'The future of learning<br>begins with <em>curiosity.</em>',
     aboutP1: 'I believe the best education is not the kind that gives every answer, but the kind that helps us ask better questions.',
     aboutP2: 'This blog is a space to explore new tools, human skills and thoughtful ways to learn.',
     contact: 'Write to the author', footer: 'Think. Try. Keep learning.', title: 'Education in Motion — learning for the future',
@@ -126,9 +128,48 @@ function openPost(id) {
     if (block.type === 'sources') return `<div class="source-list"><h2>${ui[language].sources}</h2><ul>${block.items.map(item => `<li><a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.title} <span aria-hidden="true">↗</span></a></li>`).join('')}</ul></div>`;
     return `<p>${block.text}</p>`;
   }).join('');
-  dialogContent.innerHTML = `<div class="dialog-content">${metaMarkup(post)}<h1>${post.title}</h1><div class="article-body">${blocks}</div></div>`;
+  const shareUrl = new URL(window.location.href);
+  shareUrl.hash = `article-${post.id}`;
+  const url = encodeURIComponent(shareUrl.href);
+  const text = encodeURIComponent(post.title);
+  const shareButtons = `<section class="share-panel" aria-label="${ui[language].share}">
+    <span class="share-label">${ui[language].share}</span>
+    <button class="share-action share-primary" type="button" data-share-native>${ui[language].shareNative}</button>
+    <button class="share-action" type="button" data-share-copy>${ui[language].copyLink}</button>
+    <a class="share-action share-platform" href="https://t.me/share/url?url=${url}&text=${text}" target="_blank" rel="noopener noreferrer">Telegram</a>
+    <a class="share-action share-platform" href="https://www.facebook.com/sharer/sharer.php?u=${url}" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a class="share-action share-platform" href="https://www.linkedin.com/sharing/share-offsite/?url=${url}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a class="share-action share-platform" href="https://api.whatsapp.com/send?text=${text}%20${url}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="share-action share-platform" href="mailto:?subject=${text}&body=${url}">Email</a>
+    <span class="share-status" role="status" aria-live="polite"></span>
+  </section>`;
+  dialogContent.innerHTML = `<div class="dialog-content">${metaMarkup(post)}<h1>${post.title}</h1>${shareButtons}<div class="article-body">${blocks}</div></div>`;
   if (!dialog.open) dialog.showModal();
   history.replaceState(null, '', `#article-${post.id}`);
+}
+
+async function copyArticleLink(postId, statusNode) {
+  const shareUrl = new URL(window.location.href);
+  shareUrl.hash = `article-${postId}`;
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(shareUrl.href);
+    } else {
+      const temporary = document.createElement('textarea');
+      temporary.value = shareUrl.href;
+      temporary.setAttribute('readonly', '');
+      temporary.style.position = 'fixed';
+      temporary.style.opacity = '0';
+      document.body.append(temporary);
+      temporary.select();
+      const copied = document.execCommand('copy');
+      temporary.remove();
+      if (!copied) throw new Error('Clipboard unavailable');
+    }
+    statusNode.textContent = ui[language].copied;
+  } catch {
+    statusNode.textContent = ui[language].shareError;
+  }
 }
 
 function render() {
@@ -149,6 +190,26 @@ function render() {
 }
 
 search.addEventListener('input', render);
+dialogContent.addEventListener('click', async event => {
+  const button = event.target.closest('button');
+  if (!button) return;
+  const id = location.hash.startsWith('#article-') ? location.hash.slice(9) : '';
+  if (!id) return;
+  const statusNode = dialogContent.querySelector('.share-status');
+  if (button.hasAttribute('data-share-copy')) {
+    await copyArticleLink(id, statusNode);
+  } else if (button.hasAttribute('data-share-native')) {
+    const post = posts.find(item => item.id === id);
+    const shareUrl = new URL(window.location.href);
+    shareUrl.hash = `article-${id}`;
+    if (navigator.share) {
+      try { await navigator.share({ title: post.title, text: post.excerpt, url: shareUrl.href }); }
+      catch (error) { if (error.name !== 'AbortError') statusNode.textContent = ui[language].shareError; }
+    } else {
+      await copyArticleLink(id, statusNode);
+    }
+  }
+});
 languageToggle.addEventListener('click', () => {
   const openId = dialog.open ? location.hash.replace('#article-', '') : '';
   language = language === 'uk' ? 'en' : 'uk';

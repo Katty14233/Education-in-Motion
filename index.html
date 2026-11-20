@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <meta name="description" content="Особистий блог про навчання майбутнього: ідеї, технології та практики, які допомагають вчитися все життя.">
+  <title>Уроки завтра — блог про навчання майбутнього</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до матеріалів</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Уроки завтра — на головну"><span class="brand-mark">у.</span><span>уроки <b>завтра</b></span></a>
+    <nav class="nav" aria-label="Основна навігація">
+      <a href="#home">Головна</a><a href="#articles">Усі матеріали</a><a href="#about">Про блог</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Увімкнути темну тему" title="Змінити тему"><span aria-hidden="true">◐</span></button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Нотатки про освіту, що змінюється</p>
+        <h1>Вчитися — це<br><span>бути в русі.</span></h1>
+        <p class="hero-text">Досліджую, яким буде навчання завтра: від штучного інтелекту до звички вчитися все життя. Тут — ідеї, які можна застосувати вже сьогодні.</p>
+        <a class="button button-dark" href="#articles">Читати матеріали <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-label="Ілюстрація: навчання як шлях уперед" role="img">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div><div class="art-card"><span class="art-card-label">МОЯ ФОРМУЛА</span><strong>цікавість<br>+ практика<br>+ час</strong><span class="art-card-foot">= нові можливості <b>↗</b></span></div>
+        <span class="art-spark spark-one">✳</span><span class="art-spark spark-two">✦</span><span class="art-caption">Навчання не має фінішу</span>
+      </div>
+      <div class="hero-bottom"><span>ІДЕЇ ДЛЯ ТИХ, ХТО НАВЧАЄТЬСЯ</span><span>ГОРТАЙТЕ ВНИЗ <span aria-hidden="true">↓</span></span></div>
+    </section>
+
+    <section class="articles-section" id="articles">
+      <div class="section-heading"><div><p class="eyebrow">Бібліотека ідей</p><h2>Свіжі думки<span class="heading-period">.</span></h2></div><p class="section-note">Менше теорії заради теорії.<br>Більше того, що працює.</p></div>
+      <div class="toolbar"><div class="filters" id="filters" aria-label="Фільтр за темою"></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Знайти матеріал…" aria-label="Знайти матеріал"></label></div>
+      <div class="featured-wrap" id="featured-wrap"></div>
+      <div class="article-grid" id="article-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>Поки що нічого не знайшлося. Спробуйте іншу тему або запит.</p>
+    </section>
+
+    <section class="manifesto" id="about"><div class="manifesto-symbol" aria-hidden="true">✳</div><div><p class="eyebrow">Навіщо цей блог</p><h2>Майбутнє освіти<br>починається з <em>цікавості.</em></h2></div><div class="manifesto-copy"><p>Я вірю, що найкраща освіта — не та, що дає всі відповіді, а та, що допомагає ставити кращі запитання.</p><p>Цей блог — простір для роздумів про нові інструменти, людські навички та сміливі способи вчитися.</p><a class="text-link" href="mailto:hello@example.com?subject=Привіт%2C%20Уроки%20завтра">Написати автору <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">у.</span><span>уроки <b>завтра</b></span></a><span>Думати. Пробувати. Вчитися.</span><span>© <span id="year"></span> Уроки завтра</span></footer>
+  <dialog class="article-dialog" id="article-dialog" aria-label="Матеріал"><button class="dialog-close" id="dialog-close" aria-label="Закрити">×</button><article id="dialog-content"></article></dialog>
+  <script src="app.js" defer></script>
+</body>
+</html>
